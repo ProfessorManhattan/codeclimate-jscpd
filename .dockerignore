@@ -1,0 +1,9 @@
+.git
+.idea
+.codeclimate.yml
+Dockerfile
+Makefile
+node_modules
+slim.report.json
+contrainer-test-config.yaml
+paths.txt
