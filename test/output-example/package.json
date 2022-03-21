@@ -1,0 +1,7 @@
+{
+  "jscpd": {
+    "threshold": 0,
+    "ignore": ["**/__snapshots__/**","**/node_modules/**","**/report/**","**/codeclimate-jscpd.js"],
+    "absolute": true
+  }
+}

@@ -1,0 +1,24 @@
+---
+schemaVersion: "2.0.0"
+
+commandTests:
+  - name: "Test jscpd --help"
+    command: "jscpd"
+    args: ["--help"]
+    expectedOutput: [".*detector of copy/paste in files.*"]
+  - name: "test command"
+    command: "sh"
+    args:
+      - -c
+      - codeclimate-jscpd
+    expectedOutput: [".*Duplicate block of code found in javascript file.*"]
+
+metadataTest:
+  labels:
+    - key: 'maintainer'
+      value: 'Megabyte Labs <help@megabyte.space>'
+    - key: 'space.megabyte.type'
+      value: 'codeclimate'
+  volumes: ["/code"]
+  workdir: "/code"
+  user: "app"        
