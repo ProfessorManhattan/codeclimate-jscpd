@@ -103,7 +103,10 @@
     "slug": "jscpd",
     "subgroup": "codeclimate",
     "title": "jscpd CodeClimate Engine",
-    "versionCommand": "docker run -it megabytelabs/jscpd:latest --version"
+    "versionCommand": "docker run -it megabytelabs/jscpd:latest --version",
+    "github_id": "R_kgDOHCl01g",
+    "gitlab_project_id": "32220426",
+    "gitlab_group_id": "14556970"
   },
   "changelog": {
     "displayTypes": [
