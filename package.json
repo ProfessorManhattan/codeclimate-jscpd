@@ -29,7 +29,6 @@
     "lint": "bash start.sh && task lint",
     "preload": "bash start.sh && task preload",
     "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
-    "prepublishOnly": "test -z $SKIP_PREPUB && bash start.sh && task npm:bundle:create || true",
     "release": "bash start.sh && task publish:semantic-release",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "test -z $SKIP_NPM_START && bash start.sh || true",
@@ -46,13 +45,13 @@
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
-    "@commitlint/config-conventional": "latest",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
-    "handlebars-helpers": "latest",
     "prettier-config-sexy-mode": "latest",
     "semantic-release-config": "latest",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "@commitlint/config-conventional": "latest",
+    "handlebars-helpers": "latest"
   },
   "keywords": [
     "ci",
@@ -97,7 +96,7 @@
     "name": "jscpd",
     "overview": "This project is the home of a **[jscpd](https://github.com/kucherenko/jscpd)** [CodeClimate](https://codeclimate.com/) engine. It was built to integrate jscpd results into the GitLab merge request web UI. This project also builds a slim, standalone Hadolint linter which can be used in conjunction with the CodeClimate engine or in places where CodeClimate engine results are not required.",
     "repository": {
-      "github": "https://github.com/ProfessorManhattan/codeclimate-jscpd",
+      "github": "https://github.com/megabyte-labs/codeclimate-jscpd",
       "gitlab": "https://gitlab.com/megabyte-labs/docker/codeclimate/jscpd"
     },
     "slug": "jscpd",
@@ -119,9 +118,7 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
+    "extends": [],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "engine": "node >= 0.12.4",
