@@ -8,7 +8,7 @@
   "homepage": "https://megabyte.space",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ProfessorManhattan/codeclimate-jscpd.git"
+    "url": "git+https://github.com/megabyte-labs/codeclimate-jscpd.git"
   },
   "bugs": {
     "email": "help@megabyte.space",
@@ -34,7 +34,8 @@
     "start": "test -z $SKIP_NPM_START && bash start.sh || true",
     "test": "bash start.sh && task docker:test",
     "unpack": "bash start.sh && task npm:bundle:unpack",
-    "update": "bash start.sh && task update"
+    "update": "bash start.sh && task update",
+    "vscode": "bash start.sh && task vscode"
   },
   "config": {
     "commitizen": {
@@ -43,15 +44,21 @@
   },
   "typings": "dist/main.d.ts",
   "dependencies": {},
+  "peerDependenciesMeta": {
+    "eslint": {
+      "optional": true
+    }
+  },
   "optionalDependencies": {},
   "devDependencies": {
+    "@commitlint/config-conventional": "latest",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
+    "prettier": "^2.4.1",
     "prettier-config-sexy-mode": "latest",
     "semantic-release-config": "latest",
-    "typescript": "^4.5.5",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
+    "typescript": "^4.5.5"
   },
   "keywords": [
     "ci",
@@ -72,8 +79,11 @@
     "node": ">=14.18.0"
   },
   "publishConfig": {
+    "@gitlab:registry": "https://gitlab.com/api/v4/projects/32220426/packages/npm/",
     "@megabyte:registry": "https://gitlab.com/api/v4/projects//packages/npm/",
-    "access": "public"
+    "access": "public",
+    "registry": "https://registry.npmjs.org/",
+    "tag": "edge"
   },
   "blueprint": {
     "codeClimateLanguages": [
@@ -92,6 +102,9 @@
       "codeclimate": "--http-probe=false  --exec 'cp -rf /work/* /code && codeclimate-jscpd' --mount \"$PWD/test/output-example:/work\" --workdir '/work' --preserve-path-file 'local/paths.txt'",
       "hadolint": "--http-probe=false --exec 'jscpd --help' --preserve-path-file 'local/paths.txt'"
     },
+    "github_id": "R_kgDOHCl01g",
+    "gitlab_group_id": "14556970",
+    "gitlab_project_id": "32220426",
     "group": "docker",
     "name": "jscpd",
     "overview": "This project is the home of a **[jscpd](https://github.com/kucherenko/jscpd)** [CodeClimate](https://codeclimate.com/) engine. It was built to integrate jscpd results into the GitLab merge request web UI. This project also builds a slim, standalone Hadolint linter which can be used in conjunction with the CodeClimate engine or in places where CodeClimate engine results are not required.",
@@ -102,10 +115,7 @@
     "slug": "jscpd",
     "subgroup": "codeclimate",
     "title": "jscpd CodeClimate Engine",
-    "versionCommand": "docker run -it megabytelabs/jscpd:latest --version",
-    "github_id": "R_kgDOHCl01g",
-    "gitlab_project_id": "32220426",
-    "gitlab_group_id": "14556970"
+    "versionCommand": "docker run -it megabytelabs/jscpd:latest --version"
   },
   "changelog": {
     "displayTypes": [
@@ -118,7 +128,9 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "engine": "node >= 0.12.4",
@@ -206,6 +218,9 @@
       "task fix:prettier --",
       "task lint:vagrant"
     ],
+    "logo.(gif|jpg|jpeg|webp)": [
+      "task image:convert:logo --"
+    ],
     "logo.png": [
       "task image:resize -- 200 200",
       "task image:compress --"
@@ -243,7 +258,8 @@
     "peerDependencyRules": {
       "ignoreMissing": [
         "eslint",
-        "prettier"
+        "prettier",
+        "puppeteer"
       ]
     }
   },
@@ -256,12 +272,12 @@
       {
         "name": "beta",
         "prerelease": true
-      },
-      {
-        "name": "alpha",
-        "prerelease": true
       }
     ],
     "extends": "semantic-release-config"
+  },
+  "volta": {
+    "node": "18.4.0",
+    "yarn": "1.22.19"
   }
 }
