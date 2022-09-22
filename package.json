@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@megabytelabs/codeclimate-jscpd",
-  "version": "2.9.2",
+  "version": "3.4.5",
   "description": "A slim jscpd standalone linter / CodeClimate engine for GitLab CI",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",
@@ -100,7 +100,7 @@
     "dockerBaseTag": "jscpd",
     "dockerSlimCommand": {
       "codeclimate": "--http-probe=false  --exec 'cp -rf /work/* /code && codeclimate-jscpd' --mount \"$PWD/test/output-example:/work\" --workdir '/work' --preserve-path-file 'local/paths.txt'",
-      "hadolint": "--http-probe=false --exec 'jscpd --help' --preserve-path-file 'local/paths.txt'"
+      "jscpd": "--http-probe=false --exec 'jscpd --help' --preserve-path-file 'local/paths.txt'"
     },
     "github_id": "R_kgDOHCl01g",
     "gitlab_group_id": "14556970",
@@ -115,7 +115,15 @@
     "slug": "jscpd",
     "subgroup": "codeclimate",
     "title": "jscpd CodeClimate Engine",
-    "versionCommand": "docker run -it megabytelabs/jscpd:latest --version"
+    "versionCommand": "docker run -it megabytelabs/jscpd:latest --version",
+    "dockerSlimSize": {
+      "codeclimate": "",
+      "jscpd": ""
+    },
+    "dockerLatestSize": {
+      "codeclimate": "",
+      "jscpd": ""
+    }
   },
   "changelog": {
     "displayTypes": [

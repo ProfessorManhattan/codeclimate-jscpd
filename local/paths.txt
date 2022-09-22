@@ -1,2 +1,2 @@
+/usr/local/bin/codeclimate-jscpd
 /usr/local/node_modules/
-/usr/src/app/

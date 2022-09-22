@@ -3,15 +3,18 @@ FROM node:alpine AS codeclimate
 WORKDIR /work
 
 COPY local/codeclimate-jscpd /usr/local/bin/codeclimate-jscpd
-COPY local/package-app.json package.json
-COPY engine.json ./
+COPY local/app-package.json package.json
+COPY local/engine.json ./
 
 RUN adduser --uid 9000 --gecos "" --disabled-password app \
     && apk --no-cache add --virtual build-deps \
     jq \
     && npm i -g \
+    cosmiconfig \
+    glob \
+    jscpd \
     && rm package.json \
-    && chown -Rf app:app /usr/lib/node_modules \
+    && chown -Rf app:app /usr/local/lib/node_modules \
     && VERSION="$(jscpd --version)" \
     && jq --arg version "$VERSION" '.version = $version' > /engine.json < ./engine.json \
     && rm ./engine.json \
@@ -47,11 +50,9 @@ WORKDIR /work
 
 USER root
 
-RUN rm -rf /engine.json /usr/local/bin/codeclimate-jscpd /usr/lib/node_modules
+RUN rm -f /engine.json /usr/local/bin/codeclimate-jscpd
 
-COPY --from=node:alpine /usr/lib/node_modules /usr/lib/node_modules
-
-RUN npm i -g jscpd
+COPY --from=node:alpine /usr/local/lib/node_modules /usr/local/lib/node_modules
 
 ENTRYPOINT ["jscpd"]
 CMD ["--version"]
