@@ -9,7 +9,7 @@
   },
   "type": "build",
   "state": "done",
-  "target_reference": "megabytelabs/jscpd:latest-codeclimate",
+  "target_reference": "megabytelabs/jscpd:latest",
   "system": {
     "type": "Linux",
     "release": "5.10.104-linuxkit",
@@ -21,31 +21,31 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:3fab9fd93d29807846745ed6dd3b756ee320e56709ad6906da334472f432f17f",
-      "tags": ["latest", "latest-codeclimate"],
-      "names": ["codeclimate/codeclimate-jscpd:latest", "megabytelabs/jscpd:latest-codeclimate"]
+      "id": "sha256:684dc157f1536f5e0d615958e0289679ff84cdd05eb4626fe93ace2e128563b2",
+      "tags": ["latest"],
+      "names": ["megabytelabs/jscpd:latest"]
     },
-    "size": 204175567,
-    "size_human": "204 MB",
-    "create_time": "2022-09-22T08:50:28Z",
+    "size": 215739051,
+    "size_human": "216 MB",
+    "create_time": "2022-09-22T09:18:34Z",
     "docker_version": "",
     "architecture": "amd64",
-    "user": "app",
+    "user": "root",
     "os": "linux",
     "volumes": ["/code"],
     "labels": {
       "maintainer": "Megabyte Labs <help@megabyte.space>",
       "org.opencontainers.image.authors": "Brian Zalewski <brian@megabyte.space>",
-      "org.opencontainers.image.created": "2022-09-22T06:50:00-04:00",
+      "org.opencontainers.image.created": "2022-09-22T05:12:16-04:00",
       "org.opencontainers.image.description": "A slim jscpd standalone linter / CodeClimate engine for GitLab CI",
       "org.opencontainers.image.documentation": "https://github.com/megabyte-labs/codeclimate-jscpd/blob/master/README.md",
       "org.opencontainers.image.licenses": "MIT",
-      "org.opencontainers.image.revision": "cf76c8b560111768bc8195eec12017e37c6ab1e3",
+      "org.opencontainers.image.revision": "2be145f452d8fb79236e5cf17febca45b70a67fb",
       "org.opencontainers.image.source": "https://github.com/megabyte-labs/codeclimate-jscpd.git",
       "org.opencontainers.image.url": "https://megabyte.space",
       "org.opencontainers.image.vendor": "Megabyte Labs",
-      "org.opencontainers.image.version": "1.0.0",
-      "space.megabyte.type": "codeclimate"
+      "org.opencontainers.image.version": "3.4.5",
+      "space.megabyte.type": "linter"
     },
     "env_vars": [
       "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
@@ -56,26 +56,26 @@
       "exe_path": ""
     }
   },
-  "minified_image_size": 94762938,
+  "minified_image_size": 94554777,
   "minified_image_size_human": "95 MB",
-  "minified_image": "megabytelabs/jscpd:slim-codeclimate",
+  "minified_image": "megabytelabs/jscpd:slim",
   "minified_image_has_data": true,
-  "minified_by": 2.1545930435377594,
-  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/3fab9fd93d29807846745ed6dd3b756ee320e56709ad6906da334472f432f17f/artifacts",
+  "minified_by": 2.281630371779101,
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/684dc157f1536f5e0d615958e0289679ff84cdd05eb4626fe93ace2e128563b2/artifacts",
   "container_report_name": "creport.json",
-  "seccomp_profile_name": "codeclimate-codeclimate-jscpd-seccomp.json",
-  "apparmor_profile_name": "codeclimate-codeclimate-jscpd-apparmor-profile",
+  "seccomp_profile_name": "megabytelabs-jscpd-seccomp.json",
+  "apparmor_profile_name": "megabytelabs-jscpd-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:3fab9fd93d29807846745ed6dd3b756ee320e56709ad6906da334472f432f17f",
-      "full_name": "codeclimate/codeclimate-jscpd:latest",
-      "repo_name": "codeclimate/codeclimate-jscpd",
+      "id": "sha256:684dc157f1536f5e0d615958e0289679ff84cdd05eb4626fe93ace2e128563b2",
+      "full_name": "megabytelabs/jscpd:latest",
+      "repo_name": "megabytelabs/jscpd",
       "version_tag": "latest",
-      "raw_tags": ["codeclimate/codeclimate-jscpd:latest", "megabytelabs/jscpd:latest-codeclimate"],
-      "create_time": "2022-09-22T08:50:28Z",
-      "new_size": 204175567,
-      "new_size_human": "204 MB",
+      "raw_tags": ["megabytelabs/jscpd:latest"],
+      "create_time": "2022-09-22T09:18:34Z",
+      "new_size": 215739051,
+      "new_size_human": "216 MB",
       "instructions": [
         {
           "type": "ADD",
@@ -437,8 +437,8 @@
           "layer_index": 0,
           "size": 0,
           "command_snippet": "RUN [\"LABEL\",\"org.opencontainers.image.creat...",
-          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.created=2022-09-22T06:50:00-04:00\"]",
-          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.created=2022-09-22T06:50:00-04:00\"]"],
+          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.created=2022-09-22T05:12:16-04:00\"]",
+          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.created=2022-09-22T05:12:16-04:00\"]"],
           "comment": "buildkit.dockerfile.v0"
         },
         {
@@ -493,9 +493,9 @@
           "layer_index": 0,
           "size": 0,
           "command_snippet": "RUN [\"LABEL\",\"org.opencontainers.image.revis...",
-          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.revision=cf76c8b560111768bc8195eec12017e37c6ab1e3\"]",
+          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.revision=2be145f452d8fb79236e5cf17febca45b70a67fb\"]",
           "system_commands": [
-            "[\"LABEL\",\"org.opencontainers.image.revision=cf76c8b560111768bc8195eec12017e37c6ab1e3\"]"
+            "[\"LABEL\",\"org.opencontainers.image.revision=2be145f452d8fb79236e5cf17febca45b70a67fb\"]"
           ],
           "comment": "buildkit.dockerfile.v0"
         },
@@ -549,24 +549,118 @@
           "layer_index": 0,
           "size": 0,
           "command_snippet": "RUN [\"LABEL\",\"org.opencontainers.image.versi...",
-          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.version=1.0.0\"]",
-          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.version=1.0.0\"]"],
+          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.version=3.4.5\"]",
+          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.version=3.4.5\"]"],
           "comment": "buildkit.dockerfile.v0"
         },
         {
           "type": "RUN",
           "time": "2022-09-22T08:50:28Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"LABEL\",\"space.megabyte.type=codeclimat...",
+          "command_all": "RUN [\"LABEL\",\"space.megabyte.type=codeclimate\"]",
+          "system_commands": ["[\"LABEL\",\"space.megabyte.type=codeclimate\"]"],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2022-09-22T08:51:06Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"WORKDIR\",\"/work\"]",
+          "command_all": "RUN [\"WORKDIR\",\"/work\"]",
+          "system_commands": ["[\"WORKDIR\",\"/work\"]"],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2022-09-22T08:51:06Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"USER\",\"root\"]",
+          "command_all": "RUN [\"USER\",\"root\"]",
+          "system_commands": ["[\"USER\",\"root\"]"],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2022-09-22T09:18:34Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"rm\",\"-f\",\"/engine...",
+          "command_all": "RUN [\"RUN\",\"/bin/sh\",\"-c\",\"rm\",\"-f\",\"/engine.json\",\"/usr/local/bin/codeclimate-jscpd\"]",
+          "system_commands": [
+            "[\"RUN\",\"/bin/sh\",\"-c\",\"rm\",\"-f\",\"/engine.json\",\"/usr/local/bin/codeclimate-jscpd\"]"
+          ],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2022-09-22T09:18:34Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 11563484,
+          "size_human": "12 MB",
+          "command_snippet": "RUN [\"COPY\",\"/usr/local/lib/node_modules\",\"/...",
+          "command_all": "RUN [\"COPY\",\"/usr/local/lib/node_modules\",\"/usr/local/lib/node_modules\"]",
+          "system_commands": ["[\"COPY\",\"/usr/local/lib/node_modules\",\"/usr/local/lib/node_modules\"]"],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2022-09-22T09:18:34Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"ENTRYPOINT\",\"[jscpd]\"]",
+          "command_all": "RUN [\"ENTRYPOINT\",\"[jscpd]\"]",
+          "system_commands": ["[\"ENTRYPOINT\",\"[jscpd]\"]"],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2022-09-22T09:18:34Z",
+          "is_nop": false,
+          "is_exec_form": true,
+          "local_image_exists": false,
+          "layer_index": 0,
+          "size": 0,
+          "command_snippet": "RUN [\"CMD\",\"[--version]\"]",
+          "command_all": "RUN [\"CMD\",\"[--version]\"]",
+          "system_commands": ["[\"CMD\",\"[--version]\"]"],
+          "comment": "buildkit.dockerfile.v0"
+        },
+        {
+          "type": "RUN",
+          "time": "2022-09-22T09:18:34Z",
           "is_last_instruction": true,
           "is_nop": false,
           "is_exec_form": true,
           "local_image_exists": true,
           "layer_index": 0,
           "size": 0,
-          "command_snippet": "RUN [\"LABEL\",\"space.megabyte.type=codeclimat...",
-          "command_all": "RUN [\"LABEL\",\"space.megabyte.type=codeclimate\"]",
-          "system_commands": ["[\"LABEL\",\"space.megabyte.type=codeclimate\"]"],
+          "command_snippet": "RUN [\"LABEL\",\"space.megabyte.type=linter\"]",
+          "command_all": "RUN [\"LABEL\",\"space.megabyte.type=linter\"]",
+          "system_commands": ["[\"LABEL\",\"space.megabyte.type=linter\"]"],
           "comment": "buildkit.dockerfile.v0",
-          "raw_tags": ["codeclimate/codeclimate-jscpd:latest", "megabytelabs/jscpd:latest-codeclimate"]
+          "raw_tags": ["megabytelabs/jscpd:latest"]
         }
       ]
     }

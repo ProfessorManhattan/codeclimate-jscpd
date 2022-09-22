@@ -1,7 +1,7 @@
 {
   "private": false,
   "name": "@megabytelabs/codeclimate-jscpd",
-  "version": "3.4.6",
+  "version": "1.0.0",
   "description": "A slim jscpd standalone linter / CodeClimate engine for GitLab CI",
   "license": "MIT",
   "author": "Brian Zalewski <brian@megabyte.space> (https://megabyte.space)",

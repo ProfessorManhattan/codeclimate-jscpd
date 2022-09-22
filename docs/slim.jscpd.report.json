@@ -21,13 +21,13 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:3148213f7261333f5313e49c8e39ace054a66016992fe635a96207fd5891741e",
+      "id": "sha256:0eb0f7d10c8ab413a0f343191c3e1851cd3a0cf3f24d921ccc7eadaa35458e78",
       "tags": ["latest"],
       "names": ["megabytelabs/jscpd:latest"]
     },
     "size": 215739051,
     "size_human": "216 MB",
-    "create_time": "2022-09-22T09:52:57Z",
+    "create_time": "2022-09-22T10:52:07Z",
     "docker_version": "",
     "architecture": "amd64",
     "user": "root",
@@ -36,15 +36,15 @@
     "labels": {
       "maintainer": "Megabyte Labs <help@megabyte.space>",
       "org.opencontainers.image.authors": "Brian Zalewski <brian@megabyte.space>",
-      "org.opencontainers.image.created": "2022-09-22T05:36:26-04:00",
+      "org.opencontainers.image.created": "2022-09-22T06:50:00-04:00",
       "org.opencontainers.image.description": "A slim jscpd standalone linter / CodeClimate engine for GitLab CI",
       "org.opencontainers.image.documentation": "https://github.com/megabyte-labs/codeclimate-jscpd/blob/master/README.md",
       "org.opencontainers.image.licenses": "MIT",
-      "org.opencontainers.image.revision": "3842054e967ec1acdeae318cc61a27fedb97d236",
+      "org.opencontainers.image.revision": "cf76c8b560111768bc8195eec12017e37c6ab1e3",
       "org.opencontainers.image.source": "https://github.com/megabyte-labs/codeclimate-jscpd.git",
       "org.opencontainers.image.url": "https://megabyte.space",
       "org.opencontainers.image.vendor": "Megabyte Labs",
-      "org.opencontainers.image.version": "3.4.5",
+      "org.opencontainers.image.version": "1.0.0",
       "space.megabyte.type": "linter"
     },
     "env_vars": [
@@ -61,19 +61,19 @@
   "minified_image": "megabytelabs/jscpd:slim",
   "minified_image_has_data": true,
   "minified_by": 2.281630371779101,
-  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/3148213f7261333f5313e49c8e39ace054a66016992fe635a96207fd5891741e/artifacts",
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/0eb0f7d10c8ab413a0f343191c3e1851cd3a0cf3f24d921ccc7eadaa35458e78/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "megabytelabs-jscpd-seccomp.json",
   "apparmor_profile_name": "megabytelabs-jscpd-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:3148213f7261333f5313e49c8e39ace054a66016992fe635a96207fd5891741e",
+      "id": "sha256:0eb0f7d10c8ab413a0f343191c3e1851cd3a0cf3f24d921ccc7eadaa35458e78",
       "full_name": "megabytelabs/jscpd:latest",
       "repo_name": "megabytelabs/jscpd",
       "version_tag": "latest",
       "raw_tags": ["megabytelabs/jscpd:latest"],
-      "create_time": "2022-09-22T09:52:57Z",
+      "create_time": "2022-09-22T10:52:07Z",
       "new_size": 215739051,
       "new_size_human": "216 MB",
       "instructions": [
@@ -437,8 +437,8 @@
           "layer_index": 0,
           "size": 0,
           "command_snippet": "RUN [\"LABEL\",\"org.opencontainers.image.creat...",
-          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.created=2022-09-22T05:36:26-04:00\"]",
-          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.created=2022-09-22T05:36:26-04:00\"]"],
+          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.created=2022-09-22T06:50:00-04:00\"]",
+          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.created=2022-09-22T06:50:00-04:00\"]"],
           "comment": "buildkit.dockerfile.v0"
         },
         {
@@ -493,9 +493,9 @@
           "layer_index": 0,
           "size": 0,
           "command_snippet": "RUN [\"LABEL\",\"org.opencontainers.image.revis...",
-          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.revision=3842054e967ec1acdeae318cc61a27fedb97d236\"]",
+          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.revision=cf76c8b560111768bc8195eec12017e37c6ab1e3\"]",
           "system_commands": [
-            "[\"LABEL\",\"org.opencontainers.image.revision=3842054e967ec1acdeae318cc61a27fedb97d236\"]"
+            "[\"LABEL\",\"org.opencontainers.image.revision=cf76c8b560111768bc8195eec12017e37c6ab1e3\"]"
           ],
           "comment": "buildkit.dockerfile.v0"
         },
@@ -549,8 +549,8 @@
           "layer_index": 0,
           "size": 0,
           "command_snippet": "RUN [\"LABEL\",\"org.opencontainers.image.versi...",
-          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.version=3.4.5\"]",
-          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.version=3.4.5\"]"],
+          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.version=1.0.0\"]",
+          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.version=1.0.0\"]"],
           "comment": "buildkit.dockerfile.v0"
         },
         {
@@ -594,7 +594,7 @@
         },
         {
           "type": "RUN",
-          "time": "2022-09-22T09:52:57Z",
+          "time": "2022-09-22T10:52:06Z",
           "is_nop": false,
           "is_exec_form": true,
           "local_image_exists": false,
@@ -609,7 +609,7 @@
         },
         {
           "type": "RUN",
-          "time": "2022-09-22T09:52:57Z",
+          "time": "2022-09-22T10:52:07Z",
           "is_nop": false,
           "is_exec_form": true,
           "local_image_exists": false,
@@ -623,7 +623,7 @@
         },
         {
           "type": "RUN",
-          "time": "2022-09-22T09:52:57Z",
+          "time": "2022-09-22T10:52:07Z",
           "is_nop": false,
           "is_exec_form": true,
           "local_image_exists": false,
@@ -636,7 +636,7 @@
         },
         {
           "type": "RUN",
-          "time": "2022-09-22T09:52:57Z",
+          "time": "2022-09-22T10:52:07Z",
           "is_nop": false,
           "is_exec_form": true,
           "local_image_exists": false,
@@ -649,7 +649,7 @@
         },
         {
           "type": "RUN",
-          "time": "2022-09-22T09:52:57Z",
+          "time": "2022-09-22T10:52:07Z",
           "is_last_instruction": true,
           "is_nop": false,
           "is_exec_form": true,
