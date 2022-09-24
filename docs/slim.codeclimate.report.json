@@ -21,7 +21,7 @@
   },
   "source_image": {
     "identity": {
-      "id": "sha256:200d207d96f184fa657fa9dcc1514a130b830b48c3889017e56037a123761505",
+      "id": "sha256:20010b44530e6cac56c0d2f96175d7fb5a7a93a60ace66a489875c4f4dc016fc",
       "tags": ["latest", "latest-codeclimate"],
       "names": ["codeclimate/codeclimate-jscpd:latest", "megabytelabs/jscpd:latest-codeclimate"]
     },
@@ -36,15 +36,15 @@
     "labels": {
       "maintainer": "Megabyte Labs <help@megabyte.space>",
       "org.opencontainers.image.authors": "Brian Zalewski <brian@megabyte.space>",
-      "org.opencontainers.image.created": "2022-09-23T22:39:49-04:00",
+      "org.opencontainers.image.created": "2022-09-23T22:42:34-04:00",
       "org.opencontainers.image.description": "A slim jscpd standalone linter / CodeClimate engine for GitLab CI",
       "org.opencontainers.image.documentation": "https://github.com/megabyte-labs/codeclimate-jscpd/blob/master/README.md",
       "org.opencontainers.image.licenses": "MIT",
-      "org.opencontainers.image.revision": "93b6fb307205d11a087f61d30d3e9cb3aaa946cc",
+      "org.opencontainers.image.revision": "edaab49536ec88110316673729ce856968ecf3c8",
       "org.opencontainers.image.source": "https://github.com/megabyte-labs/codeclimate-jscpd.git",
       "org.opencontainers.image.url": "https://megabyte.space",
       "org.opencontainers.image.vendor": "Megabyte Labs",
-      "org.opencontainers.image.version": "1.0.2",
+      "org.opencontainers.image.version": "1.0.3",
       "space.megabyte.type": "codeclimate"
     },
     "env_vars": [
@@ -61,14 +61,14 @@
   "minified_image": "megabytelabs/jscpd:slim-codeclimate",
   "minified_image_has_data": true,
   "minified_by": 2.1546447726219715,
-  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/200d207d96f184fa657fa9dcc1514a130b830b48c3889017e56037a123761505/artifacts",
+  "artifact_location": "/tmp/docker-slim-state/.docker-slim-state/images/20010b44530e6cac56c0d2f96175d7fb5a7a93a60ace66a489875c4f4dc016fc/artifacts",
   "container_report_name": "creport.json",
   "seccomp_profile_name": "codeclimate-codeclimate-jscpd-seccomp.json",
   "apparmor_profile_name": "codeclimate-codeclimate-jscpd-apparmor-profile",
   "image_stack": [
     {
       "is_top_image": true,
-      "id": "sha256:200d207d96f184fa657fa9dcc1514a130b830b48c3889017e56037a123761505",
+      "id": "sha256:20010b44530e6cac56c0d2f96175d7fb5a7a93a60ace66a489875c4f4dc016fc",
       "full_name": "codeclimate/codeclimate-jscpd:latest",
       "repo_name": "codeclimate/codeclimate-jscpd",
       "version_tag": "latest",
@@ -437,8 +437,8 @@
           "layer_index": 0,
           "size": 0,
           "command_snippet": "RUN [\"LABEL\",\"org.opencontainers.image.creat...",
-          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.created=2022-09-23T22:39:49-04:00\"]",
-          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.created=2022-09-23T22:39:49-04:00\"]"],
+          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.created=2022-09-23T22:42:34-04:00\"]",
+          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.created=2022-09-23T22:42:34-04:00\"]"],
           "comment": "buildkit.dockerfile.v0"
         },
         {
@@ -493,9 +493,9 @@
           "layer_index": 0,
           "size": 0,
           "command_snippet": "RUN [\"LABEL\",\"org.opencontainers.image.revis...",
-          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.revision=93b6fb307205d11a087f61d30d3e9cb3aaa946cc\"]",
+          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.revision=edaab49536ec88110316673729ce856968ecf3c8\"]",
           "system_commands": [
-            "[\"LABEL\",\"org.opencontainers.image.revision=93b6fb307205d11a087f61d30d3e9cb3aaa946cc\"]"
+            "[\"LABEL\",\"org.opencontainers.image.revision=edaab49536ec88110316673729ce856968ecf3c8\"]"
           ],
           "comment": "buildkit.dockerfile.v0"
         },
@@ -549,8 +549,8 @@
           "layer_index": 0,
           "size": 0,
           "command_snippet": "RUN [\"LABEL\",\"org.opencontainers.image.versi...",
-          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.version=1.0.2\"]",
-          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.version=1.0.2\"]"],
+          "command_all": "RUN [\"LABEL\",\"org.opencontainers.image.version=1.0.3\"]",
+          "system_commands": ["[\"LABEL\",\"org.opencontainers.image.version=1.0.3\"]"],
           "comment": "buildkit.dockerfile.v0"
         },
         {
