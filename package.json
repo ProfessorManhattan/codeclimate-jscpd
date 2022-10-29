@@ -184,7 +184,7 @@
       "local/package-lock.json",
       "local/yarn.lock"
     ],
-    "threshold": 3
+    "threshold": 0.4
   },
   "lint-staged": {
     "(Brewfile|composer.lock|Gemfile|Gopkg.lock|Pipfile.lock)": [
