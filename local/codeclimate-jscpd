@@ -1,7 +1,10 @@
-#!/usr/bin/env bash
+#!/usr/bin/env sh
 
-jscpd --exitCode 0 --silent > /dev/null
+jscpd --exitCode 0 --silent -r json > /dev/null
 
-jq -c -r '.duplicates[] | .type = "issue" | .check_name = "Duplicated Code" | .categories = ["Duplication"] | .remediation_points = 50000 | .severity = "minor" | .description = "Duplicate block of code found in " + .format + " file" | .content.body = "Possibly duplicated from file " + .secondFile.name | .location.path = .firstFile.name | .location.positions.begin.line = .firstFile.startLoc.line | .location.positions.begin.column = .firstFile.startLoc.column | .location.positions.end.line = .firstFile.endLoc.line | .location.positions.end.column = .firstFile.endLoc.column' report/jscpd-report.json | while read DUPLICATE; do
-  printf "$DUPLICATE\0"
-done
+if [ -f report/jscpd-report.json ]; then
+  jq -c -r '.duplicates[] | .type = "issue" | .check_name = "Duplicated Code" | .categories = ["Duplication"] | .remediation_points = 50000 | .severity = "minor" | .description = "Duplicate block of code found in " + .format + " file" | .content.body = "Possibly duplicated from file " + .secondFile.name | .location.path = .firstFile.name | .location.positions.begin.line = .firstFile.startLoc.line | .location.positions.begin.column = .firstFile.startLoc.column | .location.positions.end.line = .firstFile.endLoc.line | .location.positions.end.column = .firstFile.endLoc.column' report/jscpd-report.json | while read DUPLICATE; do
+    printf "$DUPLICATE\0"
+  done
+  rm -rf report
+fi

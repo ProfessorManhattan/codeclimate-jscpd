@@ -8,17 +8,14 @@ COPY local/engine.json ./
 
 RUN adduser --uid 9000 --gecos "" --disabled-password app \
     && apk --no-cache add --virtual build-deps \
-    jq \
+    jq=~1 \
     && npm i -g \
-    cosmiconfig \
-    glob \
     jscpd \
     && rm package.json \
     && chown -Rf app:app /usr/local/lib/node_modules \
     && VERSION="$(jscpd --version)" \
     && jq --arg version "$VERSION" '.version = $version' > /engine.json < ./engine.json \
-    && rm ./engine.json \
-    && apk del build-deps
+    && rm ./engine.json
 
 USER app
 
@@ -50,9 +47,8 @@ WORKDIR /work
 
 USER root
 
-RUN rm -f /engine.json /usr/local/bin/codeclimate-jscpd
-
-COPY --from=node:alpine /usr/local/lib/node_modules /usr/local/lib/node_modules
+RUN rm -f /engine.json /usr/local/bin/codeclimate-jscpd \
+  && apk del build-deps
 
 ENTRYPOINT ["jscpd"]
 CMD ["--version"]

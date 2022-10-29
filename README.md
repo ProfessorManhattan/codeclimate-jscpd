@@ -32,8 +32,8 @@
 </div>
 <br/>
 <div align="center">
-  <a title="Version: 1.0.3" href="https://github.com/megabyte-labs/codeclimate-jscpd" target="_blank">
-    <img alt="Version: 1.0.3" src="https://img.shields.io/badge/version-1.0.3-blue.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAACNJREFUCNdjIACY//+BEp9hhM3hAzYQwoBIAqEDYQrCZLwAAGlFKxU1nF9cAAAAAElFTkSuQmCC&cacheSeconds=2592000&style=flat-square" />
+  <a title="Version: 3.5.1" href="https://github.com/megabyte-labs/codeclimate-jscpd" target="_blank">
+    <img alt="Version: 3.5.1" src="https://img.shields.io/badge/version-3.5.1-blue.svg?logo=data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgAQMAAABJtOi3AAAABlBMVEUAAAD///+l2Z/dAAAAAXRSTlMAQObYZgAAACNJREFUCNdjIACY//+BEp9hhM3hAzYQwoBIAqEDYQrCZLwAAGlFKxU1nF9cAAAAAElFTkSuQmCC&cacheSeconds=2592000&style=flat-square" />
   </a>
   <a title="GitLab build status" href="https://gitlab.com/megabyte-labs/docker/codeclimate/jscpd/-/commits/master" target="_blank">
     <img alt="Build status" src="https://img.shields.io/gitlab/pipeline-status/megabyte-labs/docker/codeclimate/jscpd?branch=master&label=build&logo=gitlab&logoColor=white&style=flat-square">
